@@ -1,0 +1,27 @@
+{
+  "name": "node-logs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha test/*.js",
+    "dev": "node app.js",
+    "dev:watch": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "joi": "^17.8.3",
+    "log4js": "^6.9.0",
+    "winston": "^3.8.2",
+    "yaml": "^2.2.1"
+  },
+  "devDependencies": {
+    "assert": "^2.0.0",
+    "mocha": "^10.2.0",
+    "supertest": "^6.3.3"
+  }
+}

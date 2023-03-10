@@ -1,0 +1,9 @@
+Logs:
+  - 
+    fileName: DingDing
+    maxSize: 1048576 # unit/k 
+    maxFiles: 10
+  - 
+    fileName: Web
+    maxSize: 1048576 # unit/k 
+    maxFiles: 10
