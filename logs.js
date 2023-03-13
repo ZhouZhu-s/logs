@@ -36,5 +36,6 @@ configs.Logs.forEach(i => {
 
 module.exports = {
 	logger,
-	configs
+	configs,
+	CST_FORMAT
 }

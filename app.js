@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const { logger, configs } = require('./logs');
+const { logger, configs, CST_FORMAT } = require('./logs');
 const Joi = require('joi');
 
 const app = express();
@@ -25,7 +25,8 @@ app.post('/frontEnd/logs', async (req, res) => {
   } else {
     const text = `${value?.routePath} ${value?.content}`;
     logger[value.type][value.warningLevel](text);
-    return res.status(200).send('success');
+    const logText = `[${CST_FORMAT()}] [${value.warningLevel}] ${value.type} - ${value.routePath} ${value.content}`;
+    return res.status(200).send(logText);
   }
 });
 
